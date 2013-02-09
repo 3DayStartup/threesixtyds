@@ -1,0 +1,246 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-02-08 18:07:06 -0600
+Connecting to database specified by database.yml
+
+PG::Error (FATAL:  database "threesixtyds_development" does not exist
+):
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/mmay/.rvm/rubies/ruby-1.9.3-head/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/mmay/.rvm/rubies/ruby-1.9.3-head/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__1258527542772384692__call__4030882760474096563__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  puma (1.6.3) lib/puma/server.rb:412:in `handle_request'
+  puma (1.6.3) lib/puma/server.rb:306:in `process_client'
+  puma (1.6.3) lib/puma/server.rb:215:in `block in run'
+  puma (1.6.3) lib/puma/thread_pool.rb:94:in `call'
+  puma (1.6.3) lib/puma/thread_pool.rb:94:in `block in spawn_thread'
+
+
+  Rendered /Users/mmay/.rvm/gems/ruby-1.9.3-head/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/mmay/.rvm/gems/ruby-1.9.3-head/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/mmay/.rvm/gems/ruby-1.9.3-head/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-02-08 18:07:41 -0600
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (15ms)
+Connecting to database specified by database.yml
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130126202945)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "profile_picture" character varying(255), "email" character varying(255), "field_of_study" character varying(255), "degree_program" character varying(255), "participant_role" character varying(255), "university" character varying(255), "participant_month" character varying(255), "participant_year" character varying(255), "linkedin" character varying(255), "twitter" character varying(255), "portfolio" character varying(255), "participant_team" character varying(255), "company" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130126202945')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-02-08 18:15:11 -0600
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-02-08 18:15:14 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Compiled scaffolds.css  (49ms)  (pid 67831)
+Compiled users.css  (1ms)  (pid 67831)
+Compiled application.css  (79ms)  (pid 67831)
+Compiled jquery.js  (2ms)  (pid 67831)
+Compiled jquery_ujs.js  (0ms)  (pid 67831)
+Compiled users.js  (407ms)  (pid 67831)
+Compiled application.js  (460ms)  (pid 67831)
+Completed 200 OK in 670ms (Views: 650.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-08 18:15:15 -0600
+Served asset /application.css - 200 OK (32ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-08 18:15:15 -0600
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-08 18:15:15 -0600
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-08 18:15:15 -0600
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-08 18:15:15 -0600
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-08 18:15:15 -0600
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-08 18:15:15 -0600
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-02-08 18:15:18 -0600
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (54.1ms)
+  Rendered users/new.html.erb within layouts/application (101.5ms)
+Completed 200 OK in 140ms (Views: 127.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-08 18:15:19 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130126202945)
+Migrating to AddDeviseToUsers (20130209002631)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL[0m
+PG::Error: ERROR:  column "email" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130126202945)
+Migrating to AddDeviseToUsers (20130209002631)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (53.8ms)[0m  [1mALTER TABLE "users" ADD COLUMN "encrypted_password" character varying(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "reset_password_token" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "reset_password_sent_at" timestamp[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "remember_created_at" timestamp
+  [1m[36m (2.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "sign_in_count" integer DEFAULT 0[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "current_sign_in_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "last_sign_in_at" timestamp[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "current_sign_in_ip" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "last_sign_in_ip" character varying(255)[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130209002631')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-02-08 18:28:30 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/mmay/.rvm/gems/ruby-1.9.3-head/gems/devise-2.2.2/app/views/devise/shared/_links.erb (1.3ms)
+  Rendered /Users/mmay/.rvm/gems/ruby-1.9.3-head/gems/devise-2.2.2/app/views/devise/sessions/new.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 132ms (Views: 70.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-08 18:28:31 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-08 18:28:31 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-08 18:28:31 -0600
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-08 18:28:31 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-08 18:28:31 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-08 18:28:31 -0600
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-08 18:28:31 -0600
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/users/sign_in.json" for 127.0.0.1 at 2013-02-08 18:28:35 -0600
+Processing by Devise::SessionsController#new as JSON
+Completed 406 Not Acceptable in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-02-08 18:28:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/mmay/.rvm/gems/ruby-1.9.3-head/gems/devise-2.2.2/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /Users/mmay/.rvm/gems/ruby-1.9.3-head/gems/devise-2.2.2/app/views/devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-02-08 18:28:40 -0600
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-08 18:28:40 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-08 18:28:40 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-08 18:28:40 -0600
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-08 18:28:40 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-08 18:28:40 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-08 18:28:40 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
