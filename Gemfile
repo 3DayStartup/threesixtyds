@@ -1,11 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 gem 'pg'
 
 gem 'foreman'
 gem 'puma' # webserver
 gem 'devise'
+
+group :development do
+  gem 'sextant'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
