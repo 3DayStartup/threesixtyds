@@ -28,4 +28,16 @@ you can open a db console w/
 start the server
 
     foreman start
+    
+## Other useful stuff
+
+In development mode you can view routes (thanks to sextant) by visiting
+
+    http://localhost:5000/rails/routes
+
+
+
+
+
+
 
