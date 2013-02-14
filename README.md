@@ -37,6 +37,11 @@ In development mode you can view routes (thanks to sextant) by visiting
 
 
 
+## TODOs
+
+ - Add [basic auth](https://github.com/plataformatec/devise/wiki/How-To:-Use-HTTP-Basic-Authentication) for api protection 
+ - Add specs for API endpoints
+
 
 
 
