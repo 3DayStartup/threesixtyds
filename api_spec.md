@@ -116,8 +116,45 @@ GET `/users/:id.json`
       }
     }
 
+## Sign In
+GET `/users/sign_in.json`
+
+#### params
+
+    {
+      "email":"test@test.net"
+      "password":"password"
+    }
+
+### response
+
+    {
+      "auth_token":"ABCDE0123456789"
+      "user": {
+        "id":1
+        "first_name":"Dirty Harry",
+        "profile_picture": "http://placehold.it/180x180",
+        "email":"bro@freeemail.net",
+        "flied_of_study":"Computer Science",
+        "degree_program":"BS",
+        "3ds_role":"Developer",
+        "university":"UT Austin",
+        "3ds_month":"06",
+        "3ds_year":"2013",
+        "linkedin":"http://www.linkedin.com/in/dirtyharry/",
+        "twitter":"@vincentglad",
+        "portfolio":"thebest.com",
+        "3ds_team":"3 Day Startup",
+        "company":"3 Day Startup"
+        "created_at":"20120301123"
+      }
+    }
 ## edit
-GET `/users/:id/edit.json`
+GET `/users/:id/edit.json&auth_token=ABCDE0123456789`
+
+### params
+
+auth_token
 
 ### response
 
@@ -144,16 +181,11 @@ GET `/users/:id/edit.json`
 
 
 ## update
-PUT `/users/:id.json`
+PUT `/users/:id.json&auth_token=ABCDE0123456789`
 
 ### params
 
-    {
-      "user": {
-        "id":1
-        "name":"Hobo Dan"
-      }
-    }
+auth_token
 
 ### response
 
@@ -180,13 +212,11 @@ PUT `/users/:id.json`
 
 
 ## destroy
-DELETE `/users/:id.json`
+DELETE `/users/:id.json&auth_token=ABCDE0123456789`
 
 ### params
 
-    {
-        "id":1
-    }
+auth_token
 
 ### response
 
@@ -194,16 +224,12 @@ DELETE `/users/:id.json`
 
 
 ## index
-Get a list of users
-GET `/users.json`
+Get a list of users (for admins only)
+GET `/users.json&auth_token=ABCDE0123456789`
 
 ### params
-// Get the first 10 users
 
-    {
-      "start":1
-      "end":10
-    }
+auth_token
 
 ### response
 
